@@ -9,85 +9,74 @@ from brain import gerar_resposta
 from internet import pesquisar_web
 
 # ==========================
-
 # CARREGAR MEMÓRIA
-
 # ==========================
 
 memoria = carregar(
-MEMORIA_FILE,
-{
-"usuario": {
-"nome": "Gustavo"
-},
-"humor": "neutro",
-"afeto": 70,
-"ultimas_mensagens": []
-}
+    MEMORIA_FILE,
+    {
+        "usuario": {
+            "nome": "Gustavo"
+        },
+        "humor": "neutro",
+        "afeto": 70,
+        "ultimas_mensagens": []
+    }
 )
 
 perfil = carregar(
-PERFIL_FILE,
-{
-"nome_ia": "Capella",
-"personalidade_base": "calma, protetora e observadora"
-}
+    PERFIL_FILE,
+    {
+        "nome_ia": "Linlin",
+        "personalidade_base": "calma, protetora e observadora"
+    }
 )
 
 # ==========================
-
 # JANELA
-
 # ==========================
 
 janela = tk.Tk()
-janela.title("Capella V10 Internet")
+janela.title("Linlin V10 Internet")
 janela.geometry("600x700")
 
 # ==========================
-
 # CHAT
-
 # ==========================
 
 chat = tk.Text(
-janela,
-wrap="word",
-font=("Consolas", 11)
+    janela,
+    wrap="word",
+    font=("Consolas", 11)
 )
 
 chat.pack(
-fill="both",
-expand=True,
-padx=5,
-pady=5
+    fill="both",
+    expand=True,
+    padx=5,
+    pady=5
 )
 
 # ==========================
-
 # ENTRADA
-
 # ==========================
 
 entrada = tk.Entry(
-janela,
-font=("Consolas", 12)
+    janela,
+    font=("Consolas", 12)
 )
 
 entrada.pack(
-fill="x",
-padx=5,
-pady=5
+    fill="x",
+    padx=5,
+    pady=5
 )
 
 # ==========================
-
 # FUNÇÃO ENVIAR
-
 # ==========================
 
 def enviar(event=None):
-
 
     msg = entrada.get().strip()
 
@@ -131,7 +120,6 @@ def enviar(event=None):
     if pesquisa:
 
         prompt += f"""
-    ```
 
     Informações encontradas na internet:
 
@@ -139,11 +127,6 @@ def enviar(event=None):
 
     Use essas informações para responder ao usuário.
     """
-
-
-    print("\n===== PROMPT =====")
-    print(prompt)
-    print("==================\n")
 
     try:
 
@@ -164,7 +147,7 @@ def enviar(event=None):
 
     registrar_mensagem(
         memoria,
-        f"Capella: {resposta}",
+        f"Linlin: {resposta}",
         MAX_MEMORIA
     )
 
@@ -174,48 +157,40 @@ def enviar(event=None):
     )
 
 
-    # ==========================
+# ==========================
+# ENTER
+# ==========================
 
-    # ENTER
-
-    # ==========================
-
-    entrada.bind(
+entrada.bind(
     "<Return>",
     enviar
 )
 
 # ==========================
-
 # BOTÃO
-
 # ==========================
 
 botao = tk.Button(
-janela,
-text="Enviar",
-command=enviar
+    janela,
+    text="Enviar",
+    command=enviar
 )
 
 botao.pack(pady=5)
 
 # ==========================
-
 # MENSAGEM INICIAL
-
 # ==========================
 
 chat.insert(
-tk.END,
-"Capella: Olá. Estou pronta para conversar.\n\n"
+    tk.END,
+    "Linlin: Olá. Estou pronta para conversar.\n\n"
 )
 
 chat.see(tk.END)
 
 # ==========================
-
 # LOOP
-
 # ==========================
 
 janela.mainloop()
