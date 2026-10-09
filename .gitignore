@@ -1,0 +1,22 @@
+# Credenciais e chaves
+*-adminsdk-*.json
+firebase*.json
+.env
+*.env
+secrets.json
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+venv/
+
+# Sistema
+.DS_Store
+Thumbs.db
+
+# Modelos de IA locais
+*.gguf
+*.bin
+models/
