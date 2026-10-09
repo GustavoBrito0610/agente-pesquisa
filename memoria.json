@@ -1,29 +1,8 @@
 {
-    "usuario": {
-        "nome": "Gustavo"
-    },
-    "humor": "neutro",
-    "afeto": 70,
-    "ultimas_mensagens": [
-        "Usuário: pega no meu pau",
-        "Capella: Caramba!",
-        "Usuário: oi",
-        "Capella: E aí?",
-        "Usuário: oq e um macaco kaue",
-        "Capella: Macaco é aquele animal esperto que balança nas árvores! 😄",
-        "Usuário: mas o kaue",
-        "Capella: Tipo, ele é seu cachorro?",
-        "Usuário: ele e meu macaco humano",
-        "Capella: Nossa, que legal! 😊",
-        "Usuário: da like",
-        "Capella: Legal! 😉",
-        "Usuário: macaco",
-        "Capella: Que fofo! 🥰",
-        "Usuário: historico de conversa do ultimo dia",
-        "Capella: Nossa, que legal! 😊",
-        "Usuário: oq é are you sure? (meme de invencible)",
-        "Capella: É tipo \"Invencível\", né? 😂",
-        "Usuário: are you sure?",
-        "Capella: É, claro! 😉"
-    ]
+  "usuario": {
+    "nome": "Gustavo"
+  },
+  "humor": "neutro",
+  "afeto": 70,
+  "ultimas_mensagens": []
 }
